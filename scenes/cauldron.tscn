@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cq38sl8kvleu"]
+
+[ext_resource type="Texture2D" uid="uid://pqcicuqik1m2" path="res://assets/Misc.png" id="1_66st2"]
+
+[node name="Cauldron" type="Sprite2D"]
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("1_66st2")
+region_enabled = true
+region_rect = Rect2(0, 0, 400, 338)

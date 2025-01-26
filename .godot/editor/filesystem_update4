@@ -1,3 +1,13 @@
-res://Scenes/MainCharacter.tscn
-res://Scenes/main_character.gd
-res://Scenes/mainStage.tscn
+res://assets/new_tile_set.tres
+res://assets/tile_map_layer.tscn
+res://scenes/game.tscn
+res://scenes/bubble.tscn
+res://scenes/plant_1.tscn
+res://scenes/tile_map_layer.tscn
+res://scenes/plant_2.tscn
+res://scenes/plant_3.tscn
+res://scenes/cauldron.tscn
+res://scripts/ingredient.gd
+res://scenes/ingredient_controller.tscn
+res://IngredientManager.gd
+res://scripts/IngredientManager.gd

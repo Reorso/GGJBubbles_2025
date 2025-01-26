@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dww0g37eehoo8"]
+
+[ext_resource type="Texture2D" uid="uid://dfqmf6hdcwjq2" path="res://assets/ShelfDecor.png" id="1_yqjs4"]
+[ext_resource type="PackedScene" uid="uid://dkgjlrfr4luhx" path="res://scenes/bubble.tscn" id="2_kmm88"]
+
+[node name="Plant1" type="Sprite2D"]
+position = Vector2(0, 9.53674e-07)
+scale = Vector2(0.044, 0.044)
+texture = ExtResource("1_yqjs4")
+region_enabled = true
+region_rect = Rect2(208, 181, 146, 300)
+
+[node name="Bubble" parent="." instance=ExtResource("2_kmm88")]
+scale = Vector2(10.2634, 10.2634)

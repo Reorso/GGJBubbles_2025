@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvij5xpdsgxf"]
+
+[ext_resource type="Script" path="res://scripts/IngredientManager.gd" id="1_xcqd5"]
+
+[node name="IngredientController" type="Node"]
+script = ExtResource("1_xcqd5")
