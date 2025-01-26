@@ -6,3 +6,4 @@
 atlas = ExtResource("1_gox41")
 region = Rect2(16, 176, 160, 304)
 metadata/SpawnWeighting = 31
+metadata/Type = "red"

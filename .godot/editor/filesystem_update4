@@ -12,3 +12,6 @@ res://scenes/plant_2.tscn
 res://assets/ingredient1.tres
 res://assets/ingredient2.tres
 res://assets/ingredient3.tres
+res://assets/cauldron.gd
+res://scripts/bubbleTravel.gd
+res://scenes/ingredient.tscn

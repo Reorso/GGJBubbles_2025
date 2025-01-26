@@ -6,3 +6,4 @@
 atlas = ExtResource("1_bnolt")
 region = Rect2(384, 224, 128, 256)
 metadata/SpawnWeighting = 33
+metadata/Type = "yellow"

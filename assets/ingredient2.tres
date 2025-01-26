@@ -6,3 +6,4 @@
 atlas = ExtResource("1_pev1r")
 region = Rect2(208, 240, 144, 240)
 metadata/SpawnWeighting = 32
+metadata/Type = "purple"

@@ -1,13 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://dt73jkpl0fj5"]
+[gd_scene load_steps=5 format=4 uid="uid://dt73jkpl0fj5"]
 
 [ext_resource type="PackedScene" uid="uid://dlsu3o6gdjkdw" path="res://scenes/tile_map_layer.tscn" id="1_a6uth"]
-[ext_resource type="Texture2D" uid="uid://pqcicuqik1m2" path="res://assets/Misc.png" id="3_lshlw"]
 [ext_resource type="PackedScene" uid="uid://cq38sl8kvleu" path="res://scenes/cauldron.tscn" id="5_3n36v"]
 [ext_resource type="PackedScene" uid="uid://dvij5xpdsgxf" path="res://scenes/ingredient_controller.tscn" id="6_bbvjl"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2d6dt"]
-atlas = ExtResource("3_lshlw")
-region = Rect2(0, 32, 400, 304)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frs50"]
 size = Vector2(247, 8)
@@ -27,9 +22,7 @@ position = Vector2(-32, -1)
 zoom = Vector2(4.635, 4.635)
 
 [node name="Cauldron" parent="." instance=ExtResource("5_3n36v")]
-position = Vector2(-42, 0)
-texture = SubResource("AtlasTexture_2d6dt")
-region_enabled = false
+position = Vector2(-32, 0)
 
 [node name="IngredientController" parent="." instance=ExtResource("6_bbvjl")]
 
@@ -52,3 +45,10 @@ shape = SubResource("RectangleShape2D_frs50")
 position = Vector2(-149, 7)
 rotation = 1.57079
 shape = SubResource("RectangleShape2D_frs50")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -144.0
+offset_top = -69.0
+offset_right = -104.0
+offset_bottom = -29.0
+text = "ingredients here"
