@@ -24,5 +24,5 @@ func register(controllerRef: Object):
 	
 func _notification(what):
 	if (what == NOTIFICATION_PREDELETE):
-		print("unregistering: " +self.name)
+		#print("unregistering: " +self.name)
 		controllerReference.unregister(self)

@@ -13,7 +13,14 @@ var weightings : Dictionary
 
 var activeIngredients : Dictionary
 
-func _ready() -> void:
+var maxIngredients = 20
+var spawnIntervalInSeconds = 1
+var lastCreated : float = 0
+
+
+var spawners = get_tree().get_nodes_in_group("spawners")
+
+func _ready() -> void:		
 	textures.append(load(PLANT_TEXTURE_1))
 	textures.append(load(PLANT_TEXTURE_2))
 	textures.append(load(PLANT_TEXTURE_3))
@@ -21,10 +28,6 @@ func _ready() -> void:
 	for thing in textures:
 		weightings[thing] = thing.get_meta("SpawnWeighting")
 		print(str("SpawnWeighting=", thing.get_meta("SpawnWeighting")))
-	
-	spawnIngredient()
-	spawnIngredient()
-	spawnIngredient()
 
 func spawnIngredient()-> void:
 	var texture = pickTexture()
@@ -34,9 +37,13 @@ func spawnIngredient()-> void:
 	p1.position = Vector2(randf_range(-130.0, 72), randf_range(-46, 36.0))
 	p1.get_node("Plant1").texture = texture
 	p1.set_meta("ingredient",texture.get_meta("Type"))
+	p1.rotation = randf_range(-45, 45)
 	#print(texture.get_meta("Type"))
 
-	add_child(p1)
+	#pick random spawner to use
+	print(spawners)
+	spawners[randi_range(0,spawners.size())].spawn(p1)
+	
 	activeIngredients[p1.name] = texture.get_meta("Type")
 	p1.register(self) #give it reference to this object so it can tell us when deleted
 	print("activeIngredients after register:", activeIngredients)
@@ -64,6 +71,11 @@ func pickTexture()-> AtlasTexture:
 	return	null;
 	
 func unregister(ref: Object):
-	print("unregistering '", ref.name, "'")
+	#print("unregistering '", ref.name, "'")
 	activeIngredients.erase(ref.name)
-	print("activeIngredients after unregister:", activeIngredients)
+	#print("activeIngredients after unregister:", activeIngredients)
+
+func _process(delta: float) -> void:
+	if activeIngredients.size() < maxIngredients && Time.get_unix_time_from_system() - lastCreated > spawnIntervalInSeconds:
+		lastCreated = Time.get_unix_time_from_system()
+		spawnIngredient()
