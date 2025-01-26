@@ -1,18 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkgjlrfr4luhx"]
+[gd_scene load_steps=2 format=3 uid="uid://dkgjlrfr4luhx"]
 
 [ext_resource type="Texture2D" uid="uid://c21auqkn47u8q" path="res://assets/bubble.png" id="1_ty85c"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_gfwnv"]
-radius = 20.0
 
 [node name="Bubble" type="Sprite2D"]
 position = Vector2(-1.90735e-06, -1.90735e-06)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("1_ty85c")
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(11.4286, 13.7143)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(-11.4286, -13.7143)
-shape = SubResource("CircleShape2D_gfwnv")

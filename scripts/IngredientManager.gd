@@ -1,39 +1,61 @@
 extends Node
 
-var plantList = []
-#"res://scenes/plant_2.tscn"
-#var pipe = preload("path")
-# Called when the node enters the scene tree for the first time.
+var textures = []
 
-const ENEMY_SCENE_PATH : String = ("res://scenes/plant_1.tscn")
+const PLANT_TEXTURE_1 : String = ("res://assets/ingredient1.tres")
+const PLANT_TEXTURE_2 : String = ("res://assets/ingredient2.tres")
+const PLANT_TEXTURE_3 : String = ("res://assets/ingredient3.tres")
+
+const PLANT_ASSET : String = ("res://scenes/plant_1.tscn")
+
+var plantAsset = load(PLANT_ASSET)
+var weightings : Dictionary
 
 func _ready() -> void:
+	textures.append(load(PLANT_TEXTURE_1))
+	textures.append(load(PLANT_TEXTURE_2))
+	textures.append(load(PLANT_TEXTURE_3))
 	
-	plantList.append(load("res://scenes/plant_1.tscn"))
-	plantList.append(load("res://scenes/plant_2.tscn"))
-	plantList.append(load("res://scenes/plant_3.tscn"))
+	for thing in textures:
+		weightings[thing] = thing.get_meta("SpawnWeighting")
+		print(str("SpawnWeighting=", thing.get_meta("SpawnWeighting")))
 	
-	var p1 =plantList[randf_range(0,2)].instantiate()
-	p1.position = Vector2(-72.0, 0.0)
+	spawnIngredient()
+	spawnIngredient()
+	spawnIngredient()
+
+func spawnIngredient()-> void:
+	var texture = pickTexture()
+	print(texture)
+	
+	var p1 = plantAsset.instantiate()
+	p1.position = Vector2(randf_range(-134.0, 134.0), randf_range(36.0, 44.0))
+	p1.get_node("Plant1").texture = texture
+
 	add_child(p1)
 
-	print(str("hello from ", p1.name, " at ", p1.position))
-		
-	var GrassEffect = load("res://scenes/plant_1.tscn")
-	var grassEffect = GrassEffect.instantiate()		
-	grassEffect.position = Vector2(randf_range(-134.0, 134.0), randf_range(36.0, 44.0))
-	#grassEffect.rotation = randf_range(-0.5, 0.5)
-	#grassEffect.skew = randf_range(-0.5, 0.5)
+func pickTexture()-> AtlasTexture:
+	var total : int
+	for key in weightings:
+		total += weightings[key]
+			
+	var roll = randi_range(0, total)
 	
-	add_child(grassEffect)
+	var runningTotal = 0
+	var weightBoundaries : Dictionary
 	
-	print(str("hello from ", grassEffect.name, " at ", grassEffect.position))
+	for key in weightings:		
+		weightBoundaries[key] = weightings[key] + runningTotal 
+		runningTotal += weightBoundaries[key]
+	print(str("boundaries=",weightBoundaries))
+	print(str("roll=", roll))
 
-	#var pipeInst = pipe.instance()
-	#add_child(pipeInst)
-	pass # Replace with function body.
-
-
+	for key in weightBoundaries:
+		if roll <= weightBoundaries[key]:
+			return key
+			
+	return	null;	
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

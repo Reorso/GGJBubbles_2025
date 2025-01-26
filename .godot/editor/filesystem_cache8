@@ -1,9 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737894390
+::res://::1737905651
 default_env.tres::Environment::-1::1737810204::0::1::::<><>::
 icon.png::CompressedTexture2D::3507275064383269003::1737810204::1737892472::1::::<><>::
 README.md::TextFile::-1::1737809542::0::1::::<><>::
-IngredientManager.gd::GDScript::-1::1737896367::0::1::::<>Node<>::
 ::res://assets/::1737894042
 Beds&Blankets.png::CompressedTexture2D::4189839424617177103::1737892909::1737892910::1::::<><>::
 bubble.png::CompressedTexture2D::6721650539549071282::1737893982::1737893983::1::::<><>::
@@ -15,16 +14,20 @@ Furniture.png::CompressedTexture2D::5323287482598310785::1737892909::1737892910:
 Hats.png::CompressedTexture2D::6237181323992716896::1737892909::1737892910::1::::<><>::
 Misc.png::CompressedTexture2D::1085998555653083883::1737892909::1737892910::1::::<><>::
 new_tile_set.tres::TileSet::4044376494962167270::1737893271::0::1::::<><>::
+new_atlas_texture.tres::AtlasTexture::2738820222879656436::1737906970::0::1::::<><>::
 ShelfDecor.png::CompressedTexture2D::7543975485394483535::1737892909::1737892910::1::::<><>::
 Top down Garden Castle.png::CompressedTexture2D::1541310840936487659::1737892901::1737892834::1::::<><>::
-::res://scenes/::1737895662
-bubble.tscn::PackedScene::7874103752084423901::1737894756::0::1::::<><>::uid://c21auqkn47u8q::::res://assets/bubble.png
-game.tscn::PackedScene::251783143094512060::1737896200::0::1::::<><>::uid://dlsu3o6gdjkdw::::res://scenes/tile_map_layer.tscn<>uid://dww0g37eehoo8::::res://scenes/plant_2.tscn<>uid://1q82kve88ave::::res://scenes/plant_1.tscn<>uid://kjgr4hnv15kq::::res://scenes/plant_3.tscn<>uid://cq38sl8kvleu::::res://scenes/cauldron.tscn
-plant_1.tscn::PackedScene::1859992413752056614::1737896081::0::1::::<><>::uid://dfqmf6hdcwjq2::::res://assets/ShelfDecor.png<>uid://dkgjlrfr4luhx::::res://scenes/bubble.tscn<>res://scripts/ingredient.gd
+::res://scenes/::1737906921
+bubble.tscn::PackedScene::7874103752084423901::1737905934::0::1::::<><>::uid://c21auqkn47u8q::::res://assets/bubble.png
+cauldron.tscn::PackedScene::175167702264065520::1737905933::0::1::::<><>::uid://pqcicuqik1m2::::res://assets/Misc.png
+game.tscn::PackedScene::251783143094512060::1737906921::0::1::::<><>::uid://dlsu3o6gdjkdw::::res://scenes/tile_map_layer.tscn<>uid://pqcicuqik1m2::::res://assets/Misc.png<>uid://1q82kve88ave::::res://scenes/plant_1.tscn<>uid://cq38sl8kvleu::::res://scenes/cauldron.tscn<>uid://dvij5xpdsgxf::::res://scenes/ingredient_controller.tscn<>uid://dfqmf6hdcwjq2::::res://assets/ShelfDecor.png
+ingredient_controller.tscn::PackedScene::254421883753889675::1737905933::0::1::::<><>::res://scripts/IngredientManager.gd
+plant_1.tscn::PackedScene::1859992413752056614::1737906262::0::1::::<><>::uid://dfqmf6hdcwjq2::::res://assets/ShelfDecor.png<>uid://dkgjlrfr4luhx::::res://scenes/bubble.tscn<>res://scripts/ingredient.gd<>res://scripts/character_body_2d.gd
 plant_2.tscn::PackedScene::8750363081562845869::1737894756::0::1::::<><>::uid://dfqmf6hdcwjq2::::res://assets/ShelfDecor.png<>uid://dkgjlrfr4luhx::::res://scenes/bubble.tscn
-plant_3.tscn::PackedScene::720864031230409436::1737894756::0::1::::<><>::uid://dfqmf6hdcwjq2::::res://assets/ShelfDecor.png<>uid://dkgjlrfr4luhx::::res://scenes/bubble.tscn
-cauldron.tscn::PackedScene::175167702264065520::1737895093::0::1::::<><>::uid://pqcicuqik1m2::::res://assets/Misc.png
-ingredient_controller.tscn::PackedScene::254421883753889675::1737896395::0::1::::<><>::
-tile_map_layer.tscn::PackedScene::7969763256248227612::1737895093::0::1::::<><>::uid://v7vfuacyimnb::::res://assets/Top down Garden Castle.png
-::res://scripts/::1737895662
-ingredient.gd::GDScript::-1::1737896081::0::1::::<>Sprite2D<>::
+plant_3.tscn::PackedScene::720864031230409436::1737905934::0::1::::<><>::uid://dfqmf6hdcwjq2::::res://assets/ShelfDecor.png<>uid://dkgjlrfr4luhx::::res://scenes/bubble.tscn
+tile_map_layer.tscn::PackedScene::7969763256248227612::1737905933::0::1::::<><>::uid://v7vfuacyimnb::::res://assets/Top down Garden Castle.png
+::res://scripts/::1737906000
+character_body_2d.gd::GDScript::-1::1737905980::0::1::::<>CharacterBody2D<>::
+ingredient.gd::GDScript::-1::1737902846::0::1::::<>Sprite2D<>::
+IngredientManager.gd::GDScript::-1::1737903653::0::1::::<>Node<>::
+test.gd::GDScript::-1::1737903916::0::1::::<>Sprite2D<>::
