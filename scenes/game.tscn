@@ -22,7 +22,7 @@ position = Vector2(-32, -1)
 zoom = Vector2(4.635, 4.635)
 
 [node name="Plant2" parent="." instance=ExtResource("2_rihyq")]
-position = Vector2(-134, -44)
+position = Vector2(-136, 36)
 
 [node name="Plant3" parent="." instance=ExtResource("3_yqtss")]
 visible = false
