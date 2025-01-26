@@ -1,0 +1,9 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cw4ldonyhtrwg"]
+
+[ext_resource type="Texture2D" uid="uid://dfqmf6hdcwjq2" path="res://assets/ShelfDecor.png" id="1_gox41"]
+
+[resource]
+atlas = ExtResource("1_gox41")
+region = Rect2(16, 176, 160, 304)
+metadata/SpawnWeighting = 31
+metadata/Type = "red"

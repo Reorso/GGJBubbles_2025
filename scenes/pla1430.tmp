@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://1q82kve88ave"]
+
+[ext_resource type="Texture2D" uid="uid://dfqmf6hdcwjq2" path="res://assets/ShelfDecor.png" id="1_ms6w0"]
+[ext_resource type="PackedScene" uid="uid://dkgjlrfr4luhx" path="res://scenes/bubble.tscn" id="2_chq08"]
+[ext_resource type="Script" path="res://scripts/ingredient.gd" id="2_fqpim"]
+[ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="5_y0dvs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a1q0i"]
+
+[node name="Plant1" type="Sprite2D"]
+z_index = 2
+position = Vector2(0, 9.53674e-07)
+scale = Vector2(0.0441092, 0.0441092)
+texture = ExtResource("1_ms6w0")
+region_enabled = true
+region_rect = Rect2(9.41333, 174.448, 174.488, 306.533)
+script = ExtResource("2_fqpim")
+
+[node name="Bubble" parent="." instance=ExtResource("2_chq08")]
+scale = Vector2(10.2634, 10.2634)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("5_y0dvs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_a1q0i")
