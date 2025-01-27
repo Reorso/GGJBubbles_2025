@@ -13,14 +13,17 @@ var weightings : Dictionary
 
 var activeIngredients : Dictionary
 
-var maxIngredients = 20
+var maxIngredients = 50
 var spawnIntervalInSeconds = 1
 var lastCreated : float = 0
 
 
-var spawners = get_tree().get_nodes_in_group("spawners")
+var spawners
 
 func _ready() -> void:		
+	await(self.ready)
+	spawners = get_tree().get_nodes_in_group("spawners")
+	
 	textures.append(load(PLANT_TEXTURE_1))
 	textures.append(load(PLANT_TEXTURE_2))
 	textures.append(load(PLANT_TEXTURE_3))
@@ -33,20 +36,20 @@ func spawnIngredient()-> void:
 	var texture = pickTexture()
 	#print(texture)
 	
-	var p1 = plantAsset.instantiate()
-	p1.position = Vector2(randf_range(-130.0, 72), randf_range(-46, 36.0))
+	var p1 :CharacterBody2D = plantAsset.instantiate()
+	#p1.position = Vector2(randf_range(-130.0, 72), randf_range(-46, 36.0))
 	p1.get_node("Plant1").texture = texture
 	p1.set_meta("ingredient",texture.get_meta("Type"))
-	p1.rotation = randf_range(-45, 45)
+	p1.rotation = randf_range(-45.0, 45.0)
 	#print(texture.get_meta("Type"))
 
 	#pick random spawner to use
-	print(spawners)
-	spawners[randi_range(0,spawners.size())].spawn(p1)
+	#print(spawners)
+	spawners[randi_range(0,spawners.size()-1)].spawn(p1)
 	
 	activeIngredients[p1.name] = texture.get_meta("Type")
 	p1.register(self) #give it reference to this object so it can tell us when deleted
-	print("activeIngredients after register:", activeIngredients)
+	#print("activeIngredients after register:", activeIngredients)
 
 func pickTexture()-> AtlasTexture:
 	var total : int

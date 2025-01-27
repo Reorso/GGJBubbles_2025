@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://dt73jkpl0fj5"]
+[gd_scene load_steps=7 format=4 uid="uid://dt73jkpl0fj5"]
 
 [ext_resource type="PackedScene" uid="uid://dlsu3o6gdjkdw" path="res://scenes/tile_map_layer.tscn" id="1_rmbs3"]
 [ext_resource type="PackedScene" uid="uid://cq38sl8kvleu" path="res://scenes/cauldron.tscn" id="2_ikw83"]
 [ext_resource type="PackedScene" uid="uid://dvij5xpdsgxf" path="res://scenes/ingredient_controller.tscn" id="3_lxfvk"]
+[ext_resource type="PackedScene" uid="uid://b6ueaet4ouvcb" path="res://scenes/spawner.tscn" id="4_ngcxk"]
+[ext_resource type="PackedScene" uid="uid://dye6463td4l28" path="res://scenes/MainCharacter.tscn" id="5_21k87"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frs50"]
 size = Vector2(247, 8)
@@ -26,6 +28,8 @@ position = Vector2(-32, 0)
 
 [node name="IngredientController" parent="." instance=ExtResource("3_lxfvk")]
 
+[node name="spawner" parent="IngredientController" instance=ExtResource("4_ngcxk")]
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -46,9 +50,21 @@ position = Vector2(-149, 7)
 rotation = 1.57079
 shape = SubResource("RectangleShape2D_frs50")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = -144.0
-offset_top = -69.0
-offset_right = -104.0
-offset_bottom = -29.0
-text = "ingredients here"
+[node name="MainCharacter" parent="." instance=ExtResource("5_21k87")]
+position = Vector2(-64, 17)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+top_level = true
+clip_contents = false
+custom_minimum_size = Vector2(153.185, 14.575)
+offset_right = 153.185
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.0
+text = "ingredients here
+red"
+scroll_active = false
+metadata/_edit_use_anchors_ = true

@@ -1926,11 +1926,12 @@ tile_set = SubResource("TileSet_ic83i")
 
 [node name="IngredientController" parent="." instance=ExtResource("4_deatd")]
 
-[node name="spawner" parent="IngredientController" groups=["spawners"] instance=ExtResource("5_3t4h3")]
+[node name="spawner" parent="IngredientController" instance=ExtResource("5_3t4h3")]
+position = Vector2(84, 72)
 rotation = 1.5708
 
-[node name="spawner2" parent="IngredientController" groups=["spawners"] instance=ExtResource("5_3t4h3")]
-position = Vector2(119, -172)
+[node name="spawner2" parent="IngredientController" instance=ExtResource("5_3t4h3")]
+position = Vector2(190, -185)
 rotation = 3.14159
 
 [node name="Cauldron" parent="." instance=ExtResource("3_1v4s3")]
@@ -1939,26 +1940,26 @@ position = Vector2(330, -13)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(152, -43)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="BottomWall" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(252, 526)
+shape = SubResource("RectangleShape2D_vp8kb")
+one_way_collision = true
+
+[node name="TopWall" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(244, -114)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_vp8kb")
 one_way_collision = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(244, -114)
-shape = SubResource("RectangleShape2D_vp8kb")
-one_way_collision = true
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="RightWall" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(651, 180)
-rotation = 1.57079
+rotation = 4.71239
 shape = SubResource("RectangleShape2D_vp8kb")
 one_way_collision = true
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="LeftWall" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-143.999, 117.5)
-rotation = -1.5708
+rotation = -4.71239
 shape = SubResource("RectangleShape2D_vp8kb")
 one_way_collision = true
 
@@ -1976,6 +1977,7 @@ size_flags_stretch_ratio = 10.0
 text = "ingredients here
 red"
 scroll_active = false
+metadata/_edit_use_anchors_ = true
 
 [node name="MainCharacter" parent="." instance=ExtResource("2_tamy5")]
 z_index = 5
@@ -1986,4 +1988,4 @@ zoom = Vector2(3.485, 3.485)
 position_smoothing_enabled = true
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(16, -150)
+position = Vector2(-37, -46)
