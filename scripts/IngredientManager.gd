@@ -40,7 +40,8 @@ func spawnIngredient()-> void:
 	#p1.position = Vector2(randf_range(-130.0, 72), randf_range(-46, 36.0))
 	p1.get_node("Plant1").texture = texture
 	p1.set_meta("ingredient",texture.get_meta("Type"))
-	p1.rotation = randf_range(-45.0, 45.0)
+	p1.rotation_degrees = randf_range(-45.0, 45.0)
+	p1.global_position = Vector2(10,10)
 	#print(texture.get_meta("Type"))
 
 	#pick random spawner to use

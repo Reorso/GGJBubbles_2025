@@ -1927,7 +1927,7 @@ tile_set = SubResource("TileSet_ic83i")
 [node name="IngredientController" parent="." instance=ExtResource("4_deatd")]
 
 [node name="spawner" parent="IngredientController" instance=ExtResource("5_3t4h3")]
-position = Vector2(84, 72)
+position = Vector2(-29, 62)
 rotation = 1.5708
 
 [node name="spawner2" parent="IngredientController" instance=ExtResource("5_3t4h3")]
