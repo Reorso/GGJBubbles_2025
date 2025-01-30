@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://mb3afhc4n7qd"]
+
+[ext_resource type="Texture2D" uid="uid://cw4ldonyhtrwg" path="res://assets/ingredient1.tres" id="1_bxowr"]
+
+[node name="DisplayIngredient" type="Sprite2D"]
+z_index = 5
+position = Vector2(0, 1.00136e-06)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_bxowr")
+region_rect = Rect2(9.41333, 174.448, 174.488, 306.533)

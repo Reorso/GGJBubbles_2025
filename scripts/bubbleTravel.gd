@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 				#print("calling cauldron")
 				#var cauldronScript = sb2d.get_script()
 				#print("script ='", objectRef, "'")
-				objectRef.test(self.get_meta("ingredient"), self)
+				objectRef.addIngredient(self.get_meta("ingredient"), self)
 
 func register(controllerRef: Object):
 	controllerReference = controllerRef

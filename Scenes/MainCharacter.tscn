@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://ddn4i0s6p5t2a" path="res://sprites/Blue_witch/B_witch_death.png" id="3_r5gty"]
 [ext_resource type="Texture2D" uid="uid://c7vuifrcb1tk2" path="res://sprites/Blue_witch/B_witch_take_damage.png" id="5_senh3"]
 
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_bp6ot"]
 atlas = ExtResource("2_qdaui")
 region = Rect2(0, 0, 104, 46)
