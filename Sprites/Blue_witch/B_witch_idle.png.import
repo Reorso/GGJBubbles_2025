@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cd7i3g6mckmik"
-path="res://.godot/imported/B_witch_idle.png-f8922da7bba2026d5bdc1669c893c423.ctex"
+path="res://.godot/imported/B_witch_idle.png-41ffd8e3b8d7c1e76342110846b5d4d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Blue_witch/B_witch_idle.png"
-dest_files=["res://.godot/imported/B_witch_idle.png-f8922da7bba2026d5bdc1669c893c423.ctex"]
+source_file="res://sprites/Blue_witch/B_witch_idle.png"
+dest_files=["res://.godot/imported/B_witch_idle.png-41ffd8e3b8d7c1e76342110846b5d4d6.ctex"]
 
 [params]
 

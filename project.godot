@@ -12,8 +12,17 @@ config_version=5
 
 config/name="GGJBubble_2025"
 config/description="Enter an interesting project description here!"
+run/main_scene="res://scenes/ieuanscene2.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/ridiculous_coding/plugin.cfg")
+
+[global_group]
+
+spawners=""
 
 [input]
 

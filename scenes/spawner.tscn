@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6ueaet4ouvcb"]
+
+[ext_resource type="Script" path="res://scripts/spawner.gd" id="1_wlmuq"]
+
+[node name="spawner" type="Node2D" groups=["spawners"]]
+script = ExtResource("1_wlmuq")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 0, -12.39)
+width = 1.35

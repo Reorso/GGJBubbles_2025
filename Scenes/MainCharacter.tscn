@@ -1,12 +1,13 @@
 [gd_scene load_steps=54 format=3 uid="uid://dye6463td4l28"]
 
-[ext_resource type="Texture2D" uid="uid://b3xvr6nmfotag" path="res://Sprites/Blue_witch/B_witch_charge.png" id="1_2bqmu"]
-[ext_resource type="Script" path="res://Scripts/main_character.gd" id="1_c2t64"]
-[ext_resource type="Texture2D" uid="uid://cd7i3g6mckmik" path="res://Sprites/Blue_witch/B_witch_idle.png" id="2_1xvxi"]
-[ext_resource type="Texture2D" uid="uid://cfoyulbd6wsb4" path="res://Sprites/Blue_witch/B_witch_attack.png" id="2_qdaui"]
-[ext_resource type="Texture2D" uid="uid://p20q5xl5r1dw" path="res://Sprites/Blue_witch/B_witch_run.png" id="3_ld5qi"]
-[ext_resource type="Texture2D" uid="uid://ddn4i0s6p5t2a" path="res://Sprites/Blue_witch/B_witch_death.png" id="3_r5gty"]
-[ext_resource type="Texture2D" uid="uid://c7vuifrcb1tk2" path="res://Sprites/Blue_witch/B_witch_take_damage.png" id="5_senh3"]
+[ext_resource type="Texture2D" uid="uid://b3xvr6nmfotag" path="res://sprites/Blue_witch/B_witch_charge.png" id="1_2bqmu"]
+[ext_resource type="Script" path="res://scripts/main_character.gd" id="1_c2t64"]
+[ext_resource type="Texture2D" uid="uid://cd7i3g6mckmik" path="res://sprites/Blue_witch/B_witch_idle.png" id="2_1xvxi"]
+[ext_resource type="Texture2D" uid="uid://cfoyulbd6wsb4" path="res://sprites/Blue_witch/B_witch_attack.png" id="2_qdaui"]
+[ext_resource type="Texture2D" uid="uid://p20q5xl5r1dw" path="res://sprites/Blue_witch/B_witch_run.png" id="3_ld5qi"]
+[ext_resource type="Texture2D" uid="uid://ddn4i0s6p5t2a" path="res://sprites/Blue_witch/B_witch_death.png" id="3_r5gty"]
+[ext_resource type="Texture2D" uid="uid://c7vuifrcb1tk2" path="res://sprites/Blue_witch/B_witch_take_damage.png" id="5_senh3"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bp6ot"]
 atlas = ExtResource("2_qdaui")
