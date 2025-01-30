@@ -1976,7 +1976,9 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 10.0
 text = "ingredients here
 red"
+fit_content = true
 scroll_active = false
+autowrap_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="MainCharacter" parent="." instance=ExtResource("2_tamy5")]
