@@ -17,3 +17,5 @@ scale = Vector2(0.06, 0.06)
 texture = ExtResource("1_66st2")
 region_enabled = true
 region_rect = Rect2(0, 0, 400, 338)
+
+[node name="Origin" type="Node2D" parent="."]

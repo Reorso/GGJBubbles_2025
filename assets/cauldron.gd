@@ -20,3 +20,14 @@ func test(ingredient: String, ref: Object):
 	rich_text_label.text = str("Ingredients:\n", contents)
 	print(contents)	
 	ref.free() #delete the object
+
+func polarToCartesian(theta: float, magnitude: int) -> Vector2:
+	var x = magnitude * cos(theta)
+	var y = magnitude * sin(theta)
+	
+	return Vector2(x,y)
+
+#var orbit = 10
+#func _process(delta: float) -> void:
+	#polarToCartesian(0,orbit)
+	#pass
