@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dye6463td4l28" path="res://scenes/MainCharacter.tscn" id="2_tamy5"]
 [ext_resource type="PackedScene" uid="uid://cq38sl8kvleu" path="res://scenes/cauldron.tscn" id="3_1v4s3"]
 [ext_resource type="PackedScene" uid="uid://dvij5xpdsgxf" path="res://scenes/ingredient_controller.tscn" id="4_deatd"]
-[ext_resource type="PackedScene" uid="uid://b6ueaet4ouvcb" path="res://scenes/spawner.tscn" id="5_3t4h3"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="5_3t4h3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ujq2y"]
 texture = ExtResource("1_3vv86")
@@ -1982,7 +1982,6 @@ autowrap_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="MainCharacter" parent="." instance=ExtResource("2_tamy5")]
-z_index = 5
 position = Vector2(194, -42)
 
 [node name="Camera2D" type="Camera2D" parent="MainCharacter"]

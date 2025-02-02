@@ -3,48 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://b3xvr6nmfotag" path="res://sprites/Blue_witch/B_witch_charge.png" id="1_2bqmu"]
 [ext_resource type="Script" path="res://scripts/main_character.gd" id="1_c2t64"]
 [ext_resource type="Texture2D" uid="uid://cd7i3g6mckmik" path="res://sprites/Blue_witch/B_witch_idle.png" id="2_1xvxi"]
-[ext_resource type="Texture2D" uid="uid://cfoyulbd6wsb4" path="res://sprites/Blue_witch/B_witch_attack.png" id="2_qdaui"]
 [ext_resource type="Texture2D" uid="uid://p20q5xl5r1dw" path="res://sprites/Blue_witch/B_witch_run.png" id="3_ld5qi"]
 [ext_resource type="Texture2D" uid="uid://ddn4i0s6p5t2a" path="res://sprites/Blue_witch/B_witch_death.png" id="3_r5gty"]
-[ext_resource type="PackedScene" uid="uid://dodqspwbfy0hk" path="res://scenes/broom.tscn" id="7_1y2jk"]
 [ext_resource type="Texture2D" uid="uid://c7vuifrcb1tk2" path="res://sprites/Blue_witch/B_witch_take_damage.png" id="5_senh3"]
-
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bp6ot"]
-atlas = ExtResource("2_qdaui")
-region = Rect2(0, 0, 104, 46)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dlvcu"]
-atlas = ExtResource("2_qdaui")
-region = Rect2(0, 46, 104, 46)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s2off"]
-atlas = ExtResource("2_qdaui")
-region = Rect2(0, 92, 104, 46)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rxy13"]
-atlas = ExtResource("2_qdaui")
-region = Rect2(0, 138, 104, 46)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ygmqx"]
-atlas = ExtResource("2_qdaui")
-region = Rect2(0, 184, 104, 46)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j6emf"]
-atlas = ExtResource("2_qdaui")
-region = Rect2(0, 230, 104, 46)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fmfms"]
-atlas = ExtResource("2_qdaui")
-region = Rect2(0, 276, 104, 46)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d13w1"]
-atlas = ExtResource("2_qdaui")
-region = Rect2(0, 322, 104, 46)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_etx2x"]
-atlas = ExtResource("2_qdaui")
-region = Rect2(0, 368, 104, 46)
+[ext_resource type="PackedScene" uid="uid://dodqspwbfy0hk" path="res://scenes/broom.tscn" id="7_1y2jk"]
+[ext_resource type="Texture2D" uid="uid://bgrm2pb8t3psg" path="res://sprites/Broom.png" id="8_oo6ix"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xfdci"]
 atlas = ExtResource("1_2bqmu")
@@ -555,7 +518,7 @@ position = Vector2(0, -12)
 [node name="Sprite2D" type="Sprite2D" parent="Node2D"]
 position = Vector2(-1, -15)
 rotation = 2.36899
-texture = ExtResource("8_3pf4q")
+texture = ExtResource("8_oo6ix")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Sprite2D"]
 libraries = {
