@@ -1,13 +1,15 @@
 [gd_scene load_steps=6 format=3 uid="uid://1q82kve88ave"]
 
 [ext_resource type="Script" path="res://scripts/bubbleTravel.gd" id="1_053y5"]
-[ext_resource type="PackedScene" uid="uid://dkgjlrfr4luhx" path="res://scenes/bubble.tscn" id="2_4lfo8"]
+[ext_resource type="PackedScene" uid="uid://dkgjlrfr4luhx" path="res://Scenes/bubble.tscn" id="2_4lfo8"]
 [ext_resource type="Texture2D" uid="uid://cw4ldonyhtrwg" path="res://assets/ingredient1.tres" id="3_wkvi7"]
 [ext_resource type="Script" path="res://scripts/ingredient.gd" id="4_6kmlk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a1q0i"]
 
 [node name="Ingredient" type="CharacterBody2D"]
+collision_layer = 9
+collision_mask = 9
 script = ExtResource("1_053y5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
