@@ -7,11 +7,10 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var backBroom: Sprite2D = $Broom
-@onready var lookTarget: Node2D = $Node2D
-@onready var attackBroom: AnimationPlayer = $Node2D/Sprite2D/AnimationPlayer
+@onready var lookTarget: Node2D = $AttackBroomController
+@onready var attackBroom: AnimationPlayer = $AttackBroomController/SweepPivot/Sprite2D/AnimationPlayer
 
 var lockBroom = false
-
 
 func get_input():
 	var vertical = Input.get_axis("up", "down")
@@ -44,10 +43,11 @@ func _process(delta):
 func _input(event):
 	# Mouse in viewport coordinates.
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed == true:
-			print(event.position)
-			if !lockBroom:
+		if(!lockBroom and event.pressed == true):
+			if event.button_index == MOUSE_BUTTON_LEFT:
 				poke()
+			elif event.button_index == MOUSE_BUTTON_RIGHT:
+				sweep()
 	# Print the size of the viewport.
 	#print("Viewport Resolution is: ", get_viewport().get_visible_rect().size)
 
@@ -64,4 +64,16 @@ func endPoke():
 	print('end poking ', lockBroom)
 	backBroom.visible = true
 	lockBroom = false
+	attackBroom.play('RESET')
 	
+func sweep():
+	print('sweeping ', lockBroom)
+	backBroom.visible = false
+	lockBroom = true
+	attackBroom.play('sweep')
+	
+func endSweep():
+	print('end sweeping ', lockBroom)
+	backBroom.visible = true
+	lockBroom = false
+	attackBroom.play('RESET')

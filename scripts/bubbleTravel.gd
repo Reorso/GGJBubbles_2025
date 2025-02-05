@@ -26,7 +26,6 @@ func _physics_process(delta: float) -> void:
 		var objectRef :Object = collision_info.get_collider()
 		if objectRef is StaticBody2D:
 			#print("hit static")
-
 			#var sb2d: StaticBody2D = objectRef;
 			if objectRef.name == "Cauldron":
 				#print("calling cauldron")
@@ -41,7 +40,7 @@ func _physics_process(delta: float) -> void:
 func register(controllerRef: Object):
 	controllerReference = controllerRef
 
-func _notification(what):
-	if (what == NOTIFICATION_PREDELETE):
-		#print("unregistering: " +self.name)
-		controllerReference.unregister(self)
+#func _notification(what):
+	#if (what == NOTIFICATION_PREDELETE):
+		##print("unregistering: " +self.name)
+		#controllerReference.unregister(self)
