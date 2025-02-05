@@ -16,4 +16,6 @@ data_*/
 mono_crash.*.json
 
 Addons/ridiculous_coding/
+Addons/ridiculous_coding/*
 /Addons/ridiculous_coding/
+/Addons/ridiculous_coding/*
