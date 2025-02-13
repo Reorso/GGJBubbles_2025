@@ -11,6 +11,7 @@ extends CharacterBody2D
 @onready var attackBroom: AnimationPlayer = $AttackBroomController/SweepPivot/Sprite2D/AnimationPlayer
 
 var lockBroom = false
+var chargingAttack = false
 
 func get_input():
 	var vertical = Input.get_axis("up", "down")
@@ -47,7 +48,9 @@ func _input(event):
 			if event.button_index == MOUSE_BUTTON_LEFT:
 				poke()
 			elif event.button_index == MOUSE_BUTTON_RIGHT:
-				sweep()
+				charge()
+		if(chargingAttack and event.is_released() == true):
+			sweep()
 	# Print the size of the viewport.
 	#print("Viewport Resolution is: ", get_viewport().get_visible_rect().size)
 
@@ -70,7 +73,14 @@ func sweep():
 	print('sweeping ', lockBroom)
 	backBroom.visible = false
 	lockBroom = true
+	chargingAttack = false
 	attackBroom.play('sweep')
+	
+func charge():
+	print('charging ', lockBroom)
+	backBroom.visible = false
+	chargingAttack = true
+	attackBroom.play('charge')
 	
 func endSweep():
 	print('end sweeping ', lockBroom)
